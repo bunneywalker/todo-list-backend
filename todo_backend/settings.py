@@ -10,7 +10,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'your-default-secret-key')  # Use envi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('RENDER', 'False') != 'True'  # Disable debug in production (Render sets RENDER env var)
 
-ALLOWED_HOSTS = ['*']  # Update later with your Render domain
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'todo-backend.onrender.com']  # Replace with your actual backend URL
 
 # Application definition
 INSTALLED_APPS = [
@@ -90,9 +90,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS settings
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://localhost:3001",
-    "https://todo-list-frontend-mriy.onrender.com"
-        # For local development
-    # Add your Render frontend URL here after deploying the frontend
+    "http://localhost:3000",  # For local development
+    "https://todo-frontend.onrender.com",  # Your Render frontend URL
 ]
