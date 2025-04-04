@@ -10,7 +10,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'bcn=shhc0l%604-$ihar9-^+$ztj*n$c&w@(h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('RENDER', 'False') != 'True'  # Disable debug in production (Render sets RENDER env var)
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://todo-list-backend-c21x.onrender.com']  # Replace with your actual backend URL
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'todo-list-backend-c21x.onrender.com']  # Replace with your actual backend URL
 
 # Application definition
 INSTALLED_APPS = [
