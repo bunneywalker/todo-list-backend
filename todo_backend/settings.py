@@ -90,6 +90,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS settings
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # For local development
+    "http://localhost:3000",
+    "http://localhost:3001",
+    "https://todo-list-frontend-mriy.onrender.com"
+        # For local development
     # Add your Render frontend URL here after deploying the frontend
 ]
