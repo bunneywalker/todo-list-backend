@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-c5ncip%j1(^%)#e_*v1+j*cn&bri3b&_z(n)&ie)+(5q6$=k0v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['todo-list-backend-c21x.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1','localhost', 'todo-list-backend-c21x.onrender.com']
 
 
 # Application definition
@@ -38,9 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',  # For Django REST Framework
-    'corsheaders',     # If you added this for CORS
-    'tasks',           # Add your tasks app here
+    'rest_framework',
+    'rest_framework.authtoken', 
+    'corsheaders',     
+    'tasks',        
 ]
 
 MIDDLEWARE = [
@@ -129,3 +130,12 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+}
